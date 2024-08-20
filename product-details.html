@@ -1,0 +1,282 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RefurbTech - Product Details</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-indigo-600 text-white">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <svg class="h-8 w-8 mr-2" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 17L12 22L22 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M2 12L12 17L22 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="text-2xl font-bold">RefurbTech</span>
+            </div>
+            <div class="hidden md:flex space-x-4">
+                <a href="index.html" class="hover:text-indigo-200">Home</a>
+                <a href="products.html" class="hover:text-indigo-200">Products</a>
+                <a href="about.html" class="hover:text-indigo-200">About</a>
+                <a href="contact.html" class="hover:text-indigo-200">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6 py-8">
+        <section id="product-section" class="bg-white p-8 rounded-lg shadow-md">
+            <!-- Product content will be loaded here dynamically -->
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white mt-12">
+        <div class="container mx-auto px-6 py-8">
+            <div class="flex flex-wrap justify-between">
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h3 class="text-lg font-semibold mb-2">RefurbTech</h3>
+                    <p class="text-gray-400">Your trusted source for premium refurbished tech</p>
+                </div>
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h3 class="text-lg font-semibold mb-2">Quick Links</h3>
+                    <ul class="text-gray-400">
+                        <li><a href="index.html" class="hover:text-white">Home</a></li>
+                        <li><a href="products.html" class="hover:text-white">Products</a></li>
+                        <li><a href="about.html" class="hover:text-white">About Us</a></li>
+                        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="w-full md:w-1/4 mb-6 md:mb-0">
+                    <h3 class="text-lg font-semibold mb-2">Contact Us</h3>
+                    <p class="text-gray-400">Email: info@refurbtech.com</p>
+                </div>
+                <div class="w-full md:w-1/4">
+                    <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="hover:text-white">Facebook</a>
+                        <a href="#" class="hover:text-white">Twitter</a>
+                        <a href="#" class="hover:text-white">Instagram</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Sample product data
+        const products = [
+            {
+                id: 2,
+                name: 'Refurbished MacBook Pro',
+                category: 'Laptops',
+                brand: 'Apple',
+                price: 38000,
+                image: 'images/macbook_air.jpg',
+                description: 'A high-performance laptop with a sleek design, ideal for professionals and creatives.',
+                features: [
+                    '13-inch Retina display',
+                    'Apple M1 chip',
+                    '8GB RAM',
+                    '256GB SSD',
+                    'Magic Keyboard',
+                    'Touch Bar'
+                ]
+            },
+            {
+                id: 1,
+                name: 'Refurbished iPhone 12',
+                category: 'Smartphones',
+                brand: 'Apple',
+                price: 35000,
+                image: 'images/iphone12.jpg',
+                description: 'The iPhone 12 offers a stunning Super Retina XDR display and powerful A14 Bionic chip.',
+                features: [
+                    '6.1-inch Super Retina XDR display',
+                    'A14 Bionic chip',
+                    'Dual 12MP camera system',
+                    '5G capable',
+                    'Ceramic Shield front cover'
+                ]
+            },
+            {
+        id: 3,
+        name: 'Refurbished Samsung Galaxy S21',
+        category: 'Smartphones',
+        brand: 'Samsung',
+        price: 40000,
+        image: 'images/s21.jpg',
+        description: 'A premium smartphone with a Dynamic AMOLED 2X display and powerful performance.',
+        features: [
+            '6.2-inch Dynamic AMOLED 2X display',
+            'Exynos 2100 processor',
+            'Triple rear camera setup',
+            '5G support',
+            '4000mAh battery'
+        ]
+    },
+    {
+        id: 4,
+        name: 'Refurbished Dell XPS 13',
+        category: 'Laptops',
+        brand: 'Dell',
+        price: 36000,
+        image: 'images/dell_xps13.jpg',
+        description: 'A compact and powerful laptop with an InfinityEdge display, perfect for on-the-go productivity.',
+        features: [
+            '13.4-inch InfinityEdge display',
+            'Intel Core i7 processor',
+            '8GB RAM',
+            '512GB SSD',
+            'Windows 10 Pro',
+            'Backlit keyboard'
+        ]
+    },
+    {
+        id: 6,
+        name: 'Refurbished Sony WH-1000XM4',
+        category: 'Headphones',
+        brand: 'Sony',
+        price: 10000,
+        image: 'images/sony.jpg',
+        description: 'Industry-leading noise-canceling headphones with exceptional sound quality and comfort.',
+        features: [
+            'Active Noise Cancellation',
+            '30-hour battery life',
+            'Touch controls',
+            'Bluetooth connectivity',
+            'Voice assistant integration'
+        ]
+    },
+    {
+        id: 5,
+        name: 'Refurbished iPad Pro',
+        category: 'Tablets',
+        brand: 'Apple',
+        price: 29000,
+        image: 'images/ipad_pro.jpg',
+        description: 'A versatile tablet with a powerful A14 Bionic chip and a stunning Liquid Retina display.',
+        features: [
+            '10.9-inch Liquid Retina display',
+            'A14 Bionic chip',
+            '12MP rear camera',
+            '7MP front camera',
+            '64GB or 256GB storage options',
+            'Touch ID'
+        ]
+    },
+    {
+        id: 7,
+        name: 'Refurbished Google Pixel 5',
+        category: 'Smartphones',
+        brand: 'Google',
+        price: 25000,
+        image: 'images/pixel5.jpg',
+        description: 'A smart and capable smartphone with Google’s latest software features and a sleek design.',
+        features: [
+            '6.0-inch OLED display',
+            'Qualcomm Snapdragon 765G',
+            'Dual rear cameras',
+            '5G connectivity',
+            '4000mAh battery'
+        ]
+    },
+    {
+        id: 8,
+        name: 'Refurbished Lenovo ThinkPad X1',
+        category: 'Laptops',
+        brand: 'Lenovo',
+        price: 35000,
+        image: 'images/thinkpad.jpg',
+        description: 'A robust and reliable laptop with excellent performance and a durable design.',
+        features: [
+            '14-inch Full HD display',
+            'Intel Core i7 processor',
+            '16GB RAM',
+            '512GB SSD',
+            'Windows 10 Pro',
+            'Backlit keyboard'
+        ]
+    },
+    {
+        id: 9,
+        name: 'Refurbished Apple Watch Series 6',
+        category: 'Smartwatches',
+        brand: 'Apple',
+        price: 28000,
+        image: 'images/apple_watch6.jpg',
+        description: 'An advanced smartwatch with health and fitness tracking features, and seamless integration with iOS.',
+        features: [
+            'Always-on display',
+            'Blood oxygen monitoring',
+            'ECG app',
+            'GPS',
+            'Water resistant',
+            'Customizable watch faces'
+        ]
+    }
+            // ... other products ...
+        ];
+
+        // Sample reviews data
+
+
+        // Function to get the product ID from the URL
+        function getProductIdFromUrl() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('id');
+        }
+
+        // Function to load product details dynamically
+        function loadProductDetails(productId) {
+            const product = products.find(p => p.id === parseInt(productId));
+            if (!product) {
+                document.getElementById('product-section').innerHTML = `<p>Product not found.</p>`;
+                return;
+            }
+
+            // Populate product section with data
+            const productSection = document.getElementById('product-section');
+            productSection.innerHTML = `
+                <div class="flex flex-col md:flex-row">
+                    <div class="md:w-1/2 mb-6 md:mb-0">
+                        <img src="${product.image}" alt="${product.name}" class="w-full h-auto rounded-lg shadow-lg">
+                    </div>
+                    <div class="md:w-1/2 md:pl-8">
+                        <h2 class="text-3xl font-bold mb-4">${product.name}</h2>
+                        <p class="text-xl text-gray-600 mb-6">Rs.${product.price}</p>
+                        <p class="text-gray-700 mb-6">${product.description}</p>
+                        <ul class="mb-6">
+                            ${product.features.map(feature => `<li class="mb-2">- ${feature}</li>`).join('')}
+                        </ul>
+                    </div>
+                </div>
+            `;
+        }
+
+        // Function to load reviews dynamically
+        function loadProductReviews(productId) {
+            const reviewsContainer = document.getElementById('reviews-container');
+            const productReviews = reviews[productId] || [];
+                reviewsContainer.innerHTML = `<p>No reviews available for this product.</p>`;
+                return;
+
+        }
+
+        // Initialize the page with product details and reviews
+        document.addEventListener('DOMContentLoaded', () => {
+            const productId = getProductIdFromUrl();
+            if (productId) {
+                loadProductDetails(productId);
+                loadProductReviews(productId);
+            } else {
+                document.getElementById('product-section').innerHTML = `<p>Product not found.</p>`;
+                document.getElementById('reviews-section').style.display = 'none';
+            }
+        });
+    </script>
+</body>
+</html>
